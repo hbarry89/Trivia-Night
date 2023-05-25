@@ -9,3 +9,12 @@ h1 {
     font-family: 'Rock Salt', cursive;
     margin: 50px;
 }
+
+#question-display,
+#answer-display {
+    margin: 10px;
+}
+
+#answer {
+    margin-top: 50px;
+}
