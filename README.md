@@ -1,17 +1,17 @@
-# :book: Trivia-Night
+# :thinking: Trivia-Night
 
 ## :page_facing_up: Description
 
-A Trivia website created using HTML, CSS, JavaScript, and API.
+A fun trivia website created using HTML, CSS, JavaScript, and API.
 
-## :bulb: Usage
+## :sparkles: Usage
 
 [Click here](https://hbarry89.github.io/Trivia-Night/) for the live link.
 
 - Click on any category you would like from [ *General Knowledge*, *Geography*, *History*, *Language*, and *Sports* ] to display a question in that category.
 - Click on *Show Answer* for the answer.
 
-## :sparkles: Credit
+## :medal_military: Credit
 
 ### Assets
 
@@ -20,6 +20,8 @@ A Trivia website created using HTML, CSS, JavaScript, and API.
 - [Favicon](https://favicon.io/)
 - [Google Fonts](https://fonts.google.com/)
 - [Background](https://www.makeuseof.com/css-background-patterns-examples/)
+- [Emojis](https://github.com/ikatyang/emoji-cheat-sheet)
+
 
 ### Applications Used
 - VS Code
