@@ -26,14 +26,16 @@ body {
 
 h1 {
     font-family: 'Rock Salt', cursive;
-    padding: 100px;
+    margin-top: 200px;
+    margin-bottom: 50px;
 }
 
 #question-display,
 #answer-display {
-    margin: 30px 100px;
+    margin: 20px 200px;
     background-color: rgba(240, 248, 255, 0.2);
     border-radius: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #answer {
@@ -50,11 +52,11 @@ a:hover {
 }
 
 footer {
-    padding-top: 10px;
+    padding-top: 4px;
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: 30px;
+    height: 20px;
     font-family:'Courier New', Courier, monospace;
     background-color: #626262;
     text-align: center;

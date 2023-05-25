@@ -64,26 +64,31 @@ function showAnswer() {
 generalButton.addEventListener('click', function() {
   category = 'general';
   getQuestion();
+  answerButton.style.display = 'inline';
 });
 
 geographyButton.addEventListener('click', function() {
   category = 'geography';
   getQuestion();
+  answerButton.style.display = 'inline';
 });
 
 historyButton.addEventListener('click', function() {
   category = 'historyholidays';
   getQuestion();
+  answerButton.style.display = 'inline';
 });
 
 languageButton.addEventListener('click', function() {
   category = 'language';
   getQuestion();
+  answerButton.style.display = 'inline';
 });
 
 sportsButton.addEventListener('click', function() {
   category = 'sportsleisure';
   getQuestion();
+  answerButton.style.display = 'inline';
 });
 
 answerButton.addEventListener('click', showAnswer);
