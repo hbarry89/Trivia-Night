@@ -13,27 +13,24 @@ let category;
 let triviaData = [];
 let currentIndex = 0;
 
-function fetchTriviaData() {
+async function fetchTriviaData() {
   apiUrl = `https://api.api-ninjas.com/v1/trivia?category=${category}`;
   const apiKey = 'EAfOoPPMEREEYVCzrtEUjw==cJHiRTre6GwfFxIz';
-  return fetch(apiUrl, {
-    headers: {
-      'X-Api-Key': apiKey,
-    },
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      triviaData = data;
-      return data;
-    })
-    .catch(error => {
-      console.error(error);
+  try {
+    const response = await fetch(apiUrl, {
+      headers: {
+        'X-Api-Key': apiKey,
+      },
     });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    triviaData = data;
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function getQuestion() {
