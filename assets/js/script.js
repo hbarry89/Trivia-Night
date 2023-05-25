@@ -48,10 +48,12 @@ function getQuestion() {
 }
 
 function showQuestion(data) {
-  let question = data[currentIndex].question;
-  questionDisplay.textContent = question;
-  answerDisplay.textContent = '';
-  currentIndex++;
+  if (currentIndex < data.length) {
+    let question = data[currentIndex].question;
+    questionDisplay.textContent = question;
+    answerDisplay.textContent = '';
+    currentIndex++;
+  }
 }
 
 function showAnswer() {
