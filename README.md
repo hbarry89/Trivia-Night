@@ -1,19 +1,19 @@
-# Trivia-Night
+# :book: Trivia-Night
 
-## Description
+## :page_facing_up: Description
 
 A Trivia website created using HTML, CSS, JavaScript, and API.
 
-## Usage
+## :bulb: Usage
 
 [Click here](https://hbarry89.github.io/Trivia-Night/) for the live link.
 
 - Click on any category you would like from [ *General Knowledge*, *Geography*, *History*, *Language*, and *Sports* ] to display a question in that category.
 - Click on *Show Answer* for the answer.
 
-## Credit
+## :sparkles: Credit
 
-### Assets :sparkles:
+### Assets
 
 - [API Ninja](https://api-ninjas.com/) 
 - [Bootstrap](https://getbootstrap.com/)
@@ -21,11 +21,11 @@ A Trivia website created using HTML, CSS, JavaScript, and API.
 - [Google Fonts](https://fonts.google.com/)
 - [Background](https://www.makeuseof.com/css-background-patterns-examples/)
 
-### Applications Used :gear:
+### Applications Used
 - VS Code
 - ChatGPT
 
-## Questions
+## :question: Questions
 
 If you would like to see more categories please let me know!
 
