@@ -1,19 +1,90 @@
+let generalButton = document.getElementById('general');
 let geographyButton = document.getElementById('geography');
-geographyButton.addEventListener('click', getQuestion);
+let historyButton = document.getElementById('history');
+let languageButton = document.getElementById('language');
+let sportsButton = document.getElementById('sports');
+let questionDisplay = document.getElementById('question-display');
 
-function getQuestion() {
-  let questionDisplay = document.getElementById("displayQuestion");
-  let geographyTriviaUrl = 'https://opentdb.com/api.php?amount=50&category=22&difficulty=medium&type=multiple'
-  fetch(geographyTriviaUrl)
-    .then(function (response) {
+let answerButton = document.getElementById('answer');
+let answerDisplay = document.getElementById('answer-display');
+
+let category;
+
+let triviaData = [];
+let currentIndex = 0;
+
+function fetchTriviaData() {
+  apiUrl = `https://api.api-ninjas.com/v1/trivia?category=${category}`;
+  const apiKey = 'EAfOoPPMEREEYVCzrtEUjw==cJHiRTre6GwfFxIz';
+  return fetch(apiUrl, {
+    headers: {
+      'X-Api-Key': apiKey,
+    },
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       return response.json();
     })
-    .then(function (data) {
-        let questionInfo = data.results[0];
-        let question = `${questionInfo.question} ${questionInfo.incorrect_answers},${questionInfo.correct_answer}`;
-        questionDisplay.textContent = "";
-        questionDisplay.append(question);
-      })
-      .catch(error => {
-        console.error(error);
-      })};
+    .then(data => {
+      triviaData = data;
+      return data;
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
+
+function getQuestion() {
+  if (triviaData.length === 0 || currentIndex >= triviaData.length) {
+    currentIndex = 0;
+    fetchTriviaData().then(data => {
+      showQuestion(data);
+    });
+  } else {
+    showQuestion(triviaData);
+  }
+}
+
+function showQuestion(data) {
+  let question = data[currentIndex].question;
+  questionDisplay.textContent = question;
+  answerDisplay.textContent = '';
+  currentIndex++;
+}
+
+function showAnswer() {
+  let currentQuestion = questionDisplay.textContent;
+  let questionData = triviaData.find(data => data.question === currentQuestion);
+  if (questionData) {
+    answerDisplay.textContent = questionData.answer;
+  }
+}
+
+generalButton.addEventListener('click', function() {
+  category = 'general';
+  getQuestion();
+});
+
+geographyButton.addEventListener('click', function() {
+  category = 'geography';
+  getQuestion();
+});
+
+historyButton.addEventListener('click', function() {
+  category = 'historyholidays';
+  getQuestion();
+});
+
+languageButton.addEventListener('click', function() {
+  category = 'language';
+  getQuestion();
+});
+
+sportsButton.addEventListener('click', function() {
+  category = 'sportsleisure';
+  getQuestion();
+});
+
+answerButton.addEventListener('click', showAnswer);
