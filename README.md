@@ -30,6 +30,7 @@ To run the app, follow these instructions:
 - JavaScript
 - API
 - Bootstrap
+- Google Fonts
 - VS Code
 
 ## :star2: Features
@@ -40,7 +41,6 @@ To run the app, follow these instructions:
 
 - [API Ninja](https://api-ninjas.com/) 
 - [Favicon](https://favicon.io/)
-- [Google Fonts](https://fonts.google.com/)
 - [Background](https://www.makeuseof.com/css-background-patterns-examples/)
 - [ChatGPT](https://openai.com/blog/chatgpt)
 
