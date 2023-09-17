@@ -3,6 +3,7 @@ let geographyButton = document.getElementById('geography');
 let historyButton = document.getElementById('history');
 let languageButton = document.getElementById('language');
 let sportsButton = document.getElementById('sports');
+let mathButton = document.getElementById('mathematics');
 let questionDisplay = document.getElementById('question-display');
 
 let answerButton = document.getElementById('answer');
@@ -87,6 +88,12 @@ languageButton.addEventListener('click', function() {
 
 sportsButton.addEventListener('click', function() {
   category = 'sportsleisure';
+  getQuestion();
+  answerButton.style.display = 'inline';
+});
+
+mathButton.addEventListener('click', function() {
+  category = 'mathematics';
   getQuestion();
   answerButton.style.display = 'inline';
 });
